@@ -6,11 +6,11 @@
 
 :root {
 	--white-text: #f4f8fb;
-	--gray-text: #dce4ec;
+	--gray-text: #cdd6de;
 
 	--blue-color: #7cdaff;
 	--scale-m-text: scale(1, 1.3);
-	--letter-spacing: 0.2rem;
+	--letter-spacing: 0.15rem;
 }
 
 body {
@@ -99,6 +99,7 @@ main {
 	transform: var(--scale-m-text);
 	margin-bottom: 2rem;
 	margin-top: -1.5rem;
+	text-shadow: 0 0 3px rgba(0, 255, 255, 1), 0 0 3px rgba(237, 36, 255, 0.7);
 }
 
 .description {
@@ -113,18 +114,54 @@ main {
 	margin: 5rem auto;
 }
 
-.character-img {
+.stats {
+	font-size: 1.7rem;
+	letter-spacing: var(--letter-spacing);
+}
+
+.stat-name {
+	width: 15rem;
+}
+
+.stat-row {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.stat-track {
+	width: 20rem;
+	height: 0.4rem;
+	background-color: #888888;
+	border-radius: 0.1drem;
+	overflow: hidden;
+	box-shadow: 0 0 7px rgba(0, 255, 255, 1), 0 0 7px rgba(237, 36, 255, 0.7);
+}
+
+.stat-fill {
+	height: 100%;
+	background-color: rgb(146, 237, 251);
+	transition: width 1s ease-in-out;
+}
+
+.character-img-div {
 	margin-left: 6rem;
 	margin-top: 6rem;
 }
 
-.character-img img {
+.character-img {
 	width: 38rem;
 	object-fit: cover;
 	filter: saturate(0.9);
-
 	animation: bounce-effect 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
 		alternate;
+	cursor: pointer;
+}
+
+.character-img.is-paused {
+	animation-play-state: paused !important;
 }
 
 @keyframes bounce-effect {
