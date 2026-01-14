@@ -113,9 +113,9 @@ main {
 
 .white-line {
 	width: 46rem;
-	height: 0.2rem;
+	height: 0.1em;
 	background-color: var(--white-text);
-	margin: 5rem auto 2rem;
+	margin: 5rem auto 3rem;
 }
 
 .stats {
@@ -200,6 +200,7 @@ main {
 
 	width: 26rem;
 	height: 9rem;
+
 	position: absolute;
 	right: 35rem;
 	bottom: 7rem;
@@ -307,4 +308,38 @@ main {
 	transform: translateY(0);
 	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25), 0 0 8px rgba(70, 86, 255, 0.4);
 	background: linear-gradient(135deg, #5246f5, #0e32e6);
+}
+html {
+	/* 11px — база для ноутбуков (1400px)
+       20px — база для мониторов (2500px+)
+    */
+	font-size: clamp(
+		11px,
+		11px + (20 - 11) * ((100vw - 1400px) / (2500 - 1400)),
+		20px
+	);
+}
+
+@media screen and (max-width: 1024px) {
+	html {
+		font-size: clamp(
+			6px,
+			6px + (12 - 8) * ((100vw - 320px) / (1024 - 320)),
+			12px
+		);
+	}
+	.other-img-div,
+	.other-img-div-2 {
+		position: static; /* Отменяет абсолютное позиционирование */
+		margin: 2rem auto; /* Центрирует и добавляет отступы */
+		width: 90%; /* Занимает почти всю ширину экрана */
+		right: auto; /* Сбрасываем старые координаты */
+		bottom: auto;
+	}
+
+	main {
+		flex-direction: column;
+		align-items: center;
+		margin: 0;
+	}
 }
