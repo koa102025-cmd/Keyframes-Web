@@ -50,7 +50,7 @@ firstBtn.addEventListener("click", function () {
 			otherName1.textContent = "KARICH";
 			otherKind1.textContent = "RAVEN";
 
-			firstBtn.style.right = "-2.1rem";
+			firstBtn.style.right = "-4.1rem";
 		}
 		//----------------------------------------------------
 		//          PUTTING KROSH IN THE MAIN PAGE
@@ -67,7 +67,6 @@ firstBtn.addEventListener("click", function () {
 		leadership.style = "width: 75%";
 
 		characterImage.src = "./assets/images/krash.png";
-		characterImage.style.width = "36rem";
 	}
 
 	//-------------------------------------------------------=
@@ -88,7 +87,7 @@ firstBtn.addEventListener("click", function () {
 			otherName1.textContent = "KARICH";
 			otherKind1.textContent = "RAVEN";
 
-			firstBtn.style.right = "-2.1rem";
+			firstBtn.style.right = "-4.1rem";
 		}
 
 		//----------------------------------------------------
@@ -107,7 +106,6 @@ firstBtn.addEventListener("click", function () {
 		leadership.style = "width: 55%";
 
 		characterImage.src = "./assets/images/sovunya.png";
-		characterImage.style.width = "34rem";
 	}
 
 	//-------------------------------------------------------=
@@ -146,7 +144,6 @@ firstBtn.addEventListener("click", function () {
 		leadership.style = "width: 95%";
 
 		characterImage.src = "./assets/images/Karich.png";
-		characterImage.style.width = "36rem";
 	}
 });
 
@@ -172,7 +169,7 @@ secondBtn.addEventListener("click", function () {
 			otherName2.textContent = "KARICH";
 			otherKind2.textContent = "RAVEN";
 
-			secondBtn.style.right = "-2.1rem";
+			secondBtn.style.right = "-5.1rem";
 		}
 		//----------------------------------------------------
 		//          PUTTING KROSH IN THE MAIN PAGE
@@ -189,7 +186,6 @@ secondBtn.addEventListener("click", function () {
 		leadership.style = "width: 75%";
 
 		characterImage.src = "./assets/images/krash.png";
-		characterImage.style.width = "36rem";
 	}
 
 	//-------------------------------------------------------=
@@ -210,7 +206,7 @@ secondBtn.addEventListener("click", function () {
 			otherName2.textContent = "KARICH";
 			otherKind2.textContent = "RAVEN";
 
-			secondBtn.style.right = "-2.1rem";
+			secondBtn.style.right = "-3.1rem";
 		}
 
 		//----------------------------------------------------
@@ -229,7 +225,6 @@ secondBtn.addEventListener("click", function () {
 		leadership.style = "width: 55%";
 
 		characterImage.src = "./assets/images/sovunya.png";
-		characterImage.style.width = "34rem";
 	}
 
 	//-------------------------------------------------------=
@@ -268,6 +263,5 @@ secondBtn.addEventListener("click", function () {
 		leadership.style = "width: 95%";
 
 		characterImage.src = "./assets/images/Karich.png";
-		characterImage.style.width = "36rem";
 	}
 });

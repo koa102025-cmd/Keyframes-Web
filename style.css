@@ -16,6 +16,12 @@
 
 body {
 	background-color: var(--background-dark);
+	background-image: radial-gradient(
+		circle,
+		transparent 20%,
+		rgba(0, 0, 0, 0.4) 100%
+	);
+
 	color: var(--white-text);
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
@@ -31,10 +37,12 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 1rem;
-	margin-bottom: 7dvh;
+	margin-bottom: 4rem;
 	font-size: 1.5rem;
 	color: var(--gray-text);
+
+	background-color: #2a2a2a;
+	height: 6rem;
 }
 
 #logo {
@@ -50,6 +58,22 @@ header {
 	margin-right: 0.7rem;
 }
 
+.title-link {
+	color: var(--gray-text);
+	text-decoration: none;
+	cursor: pointer;
+	transition: color 0.25s;
+}
+
+.title-link:hover {
+	text-shadow: 0 0 3px rgba(0, 255, 255, 1), 0 0 2px rgba(237, 36, 255, 0.7);
+	color: var(--white-text);
+}
+
+.title-link:active {
+	color: rgb(0, 148, 168);
+}
+
 header h2 {
 	position: relative;
 	margin-right: 15rem;
@@ -58,6 +82,8 @@ header h2 {
 	transition: color 0.3s ease;
 	letter-spacing: var(--letter-spacing);
 	transform: var(--scale-m-text);
+
+	cursor: not-allowed;
 }
 
 header h2:hover {
@@ -186,6 +212,65 @@ main {
 	}
 }
 
+.curved-line {
+	margin-right: 5rem;
+	position: relative;
+	width: 20rem;
+	height: 48rem;
+	/* Убираем border и mask отсюда, чтобы они не прятали точки */
+}
+
+/* Рисуем линию отдельно через псевдоэлемент */
+.curved-line::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-right: 3px solid rgba(255, 255, 255, 0.8);
+	border-radius: 100%;
+	/* Применяем маску ТОЛЬКО к линии */
+	-webkit-mask-image: linear-gradient(
+		to bottom,
+		transparent,
+		black 25%,
+		black 75%,
+		transparent
+	);
+	mask-image: linear-gradient(
+		to bottom,
+		transparent,
+		black 25%,
+		black 75%,
+		transparent
+	);
+	pointer-events: none;
+}
+
+.dot {
+	position: absolute;
+	width: 0.7rem;
+	height: 0.7rem;
+	background-color: white;
+	border-radius: 50%;
+	right: -6px;
+	box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.dot-1 {
+	top: 20%;
+	left: 88%;
+}
+.dot-2 {
+	top: 50%;
+	left: 97.5%;
+}
+.dot-3 {
+	top: 80%;
+	left: 87%;
+}
+
 .other-img-div {
 	display: flex;
 	align-items: center;
@@ -309,6 +394,15 @@ main {
 	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25), 0 0 8px rgba(70, 86, 255, 0.4);
 	background: linear-gradient(135deg, #5246f5, #0e32e6);
 }
+
+footer {
+	position: absolute;
+	left: 1rem;
+	bottom: 1rem;
+	font-size: 1.5rem;
+	color: rgba(128, 128, 128, 0.389);
+}
+
 html {
 	/* 11px — база для ноутбуков (1400px)
        20px — база для мониторов (2500px+)
