@@ -286,7 +286,7 @@ main {
 
 	position: absolute;
 	right: 35rem;
-	bottom: 7rem;
+	bottom: 5rem;
 	border-radius: 2rem;
 	overflow: visible;
 }
@@ -307,7 +307,7 @@ main {
 	height: 9rem;
 	position: absolute;
 	right: 5rem;
-	bottom: 7rem;
+	bottom: 5rem;
 	border-radius: 2rem;
 	overflow: visible;
 }
@@ -394,38 +394,34 @@ main {
 }
 
 footer {
-	position: absolute;
-	left: 1rem;
-	bottom: 1rem;
+	position: static; /* Отменяем абсолютное позиционирование */
+	padding: 12rem 1rem 1rem 2rem;
 	font-size: 1.5rem;
-	color: rgba(128, 128, 128, 0.389);
+	color: rgba(128, 128, 128, 0.17);
 }
 
 html {
-	/* 11px — база для ноутбуков (1400px)
-       20px — база для мониторов (2500px+)
-    */
 	font-size: clamp(
-		11px,
-		11px + (20 - 11) * ((100vw - 1400px) / (2500 - 1400)),
+		10px,
+		10px + (20 - 10) * ((100vw - 1400px) / (2500 - 1400)),
 		20px
 	);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
 	html {
 		font-size: clamp(
 			6px,
-			6px + (12 - 8) * ((100vw - 320px) / (1024 - 320)),
+			6px + (12 - 8) * ((100vw - 320px) / (1124 - 320)),
 			12px
 		);
 	}
 	.other-img-div,
 	.other-img-div-2 {
-		position: static; /* Отменяет абсолютное позиционирование */
-		margin: 2rem auto; /* Центрирует и добавляет отступы */
-		width: 90%; /* Занимает почти всю ширину экрана */
-		right: auto; /* Сбрасываем старые координаты */
+		position: static;
+		margin: 2rem auto;
+		width: 90%;
+		right: auto;
 		bottom: auto;
 	}
 
@@ -437,5 +433,9 @@ html {
 
 	.curved-line {
 		display: none;
+	}
+
+	footer {
+		flex-shrink: 10;
 	}
 }
