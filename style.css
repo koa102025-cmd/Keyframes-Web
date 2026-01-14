@@ -217,10 +217,9 @@ main {
 	position: relative;
 	width: 20rem;
 	height: 48rem;
-	/* Убираем border и mask отсюда, чтобы они не прятали точки */
+	opacity: 1;
 }
 
-/* Рисуем линию отдельно через псевдоэлемент */
 .curved-line::before {
 	content: "";
 	position: absolute;
@@ -230,7 +229,6 @@ main {
 	bottom: 0;
 	border-right: 3px solid rgba(255, 255, 255, 0.8);
 	border-radius: 100%;
-	/* Применяем маску ТОЛЬКО к линии */
 	-webkit-mask-image: linear-gradient(
 		to bottom,
 		transparent,
@@ -435,5 +433,9 @@ html {
 		flex-direction: column;
 		align-items: center;
 		margin: 0;
+	}
+
+	.curved-line {
+		display: none;
 	}
 }
